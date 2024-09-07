@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+nav{
+    max-width: 1920px;
+    min-height: 70px;
+}
+.hero-section{
+    background: url(./assets/hero-img.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
