@@ -102,6 +102,7 @@ h3 {
   font-weight: 500;
   text-align: end;
   letter-spacing: 0.09em;
+  margin-bottom: 5px;
 }
 .skills {
   display: flex;
@@ -159,8 +160,8 @@ h3 {
 }
 .p-flex {
   display: flex;
-  justify-content: space-between;
-  gap: 0px 20px;
+  justify-content: center;
+  gap: 0px 15px;
   align-items: center;
 }
 .flex input {
@@ -177,6 +178,7 @@ h3 {
   font-weight: 500;
   text-align: start;
   letter-spacing: 0.09em;
+  margin-bottom: 5px;
 }
 .content p {
   font-size: 12px;
@@ -205,12 +207,41 @@ h3 {
   padding: 10px;
   border-radius: 50%;
 }
+.print {
+  width: 200px;
+  text-align: center !important;
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.edit{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printableArea,
+  #printableArea * {
+    visibility: visible;
+  }
+  #printableArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
 @media (max-width: 1024px) {
   .flex {
     flex-wrap: wrap;

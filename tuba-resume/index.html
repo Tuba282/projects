@@ -31,21 +31,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="mainContainer">
+    <div id="printableArea" class="mainContainer">
       <div class="subContainer">
         <div class="left-div">
           <div class="left-top">
             <div class="upper">
               <img src="./assets/circle.png"  class="circle">
-              <img class="dp" src="./assets/personal_dp.jpg" /><br />
+              <img class="dp edit" id="profileImage" style="cursor: pointer;" contenteditable="true"  src="./assets/personal_dp.jpg" /><br />
+              <input type="file" id="fileInput" accept="image/*">
+              <style>
+                #fileInput {
+                    display: none;
+                }
+            </style>
+              <script>
+                const profileImage = document.getElementById('profileImage');
+                const fileInput = document.getElementById('fileInput');
+        
+                profileImage.addEventListener('click', () => {
+                    fileInput.click();
+                });
+        
+                fileInput.addEventListener('change', (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            profileImage.src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+            </script>
               <img src="./assets/triangle.png" class="triangle" />
               <h3>ABOUT ME</h3>
-              <br />
 
               <hr style="border: 2px solid white; border-radius: 2px" />
             </div>
             <div class="lower">
-              <p>
+              <p class="edit" contenteditable="true">
                 I'm Tuba Jan , Emerging tech in Web3 and Blockchain at GIAIC. A
                 top scholar and IT program participant in the Governor IT
                 Initiative program. With a great foundation in front-end
@@ -56,23 +80,22 @@
           </div>
           <div class="left-bottom">
             <h3>WORKING SKILSS</h3>
-            <br />
 
             <hr style="border: 2px solid black; border-radius: 2px" />
             <br />
             <p class="skills">
-              <span><b>Front-End</b> Developer</span>
+              <span class="edit"  contenteditable="true"><b class="edit"  contenteditable="true">Front-End</b> Developer</span>
               &nbsp;&nbsp;&nbsp;&nbsp;<img src="./assets/diag-1.png" />
             </p>
             <ul type="none">
               <br />
-              <li>
+              <li class="edit"  contenteditable="true">
                 <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Mobile:
                 React Native-TypeScript, <br />
                 RN Elements
               </li>
               <br />
-              <li>
+              <li class="edit"  contenteditable="true">
                 <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Web:
                 HTML, CSS, Javascript,<br />
                 ReactJS, Bootstrap
@@ -80,45 +103,44 @@
               <br />
             </ul>
             <p class="skills">
-              <span><b>Back-End</b> Developer</span>
+              <span class="edit" contenteditable="true"><b class="edit"  contenteditable="true">Back-End</b> Developer</span>
               &nbsp;&nbsp;&nbsp;&nbsp;<img src="./assets/diag-2.png" alt="" />
             </p>
             <ul type="none">
               <br />
-              <li>
+              <li class="edit" contenteditable="true">
                 <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Not Yet
               </li>
               <br />
             </ul>
             <p class="skills">
-              <span><b>UI/UX</b> Expert</span> &nbsp;&nbsp;&nbsp;&nbsp;<img
+              <span class="edit" contenteditable="true"><b class="edit" contenteditable="true">UI/UX</b> Expert</span> &nbsp;&nbsp;&nbsp;&nbsp;<img
                 src="./assets/diag-3.png"
                 alt=""
               />
             </p>
             <ul type="none">
               <br />
-              <li>
+              <li class="edit" contenteditable="true">
                 <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Not Yet
               </li>
             </ul>
             <!-- languages -->
 
             <h3>LANGUAGES</h3>
-            <br />
 
             <hr style="border: 2px solid black; border-radius: 2px" />
             <br />
             <div class="lang">
-              <p><b>Urdu</b> <br /><span>Mother Tongue</span></p>
-              <p><b>English</b> <br /><span>International</span></p>
+              <p><b class="edit" contenteditable="true">Urdu</b> <br /><span class="edit" contenteditable="true">Mother Tongue</span></p>
+              <p><b class="edit" contenteditable="true">English</b> <br /><span class="edit" contenteditable="true">International</span></p>
             </div>
           </div>
         </div>
         <div class="right-div">
-            <h1 class="name">Tuba <span> JAN</span></h1>
+            <h1 class="name" class="edit" contenteditable="true">Tuba <span class="edit" contenteditable="true"> JAN</span></h1>
             <div class="contact">
-                <p class="FE">&nbsp;&nbsp; FRONT-END DEVELOPER</p>
+                <p class="FE" class="edit" contenteditable="true">&nbsp;&nbsp; FRONT-END DEVELOPER</p>
                 <p class="CO">CONTACT</p>
             </div><br><br>
             <div class="icons">
@@ -209,71 +231,68 @@
             <div class="content">
               
             <h3>EDUCATION</h3>
-            <br />
 
             <hr style="border: 2px solid black; border-radius: 2px" />
             <br />
-            <p><b style="color: black !important;"> GIAIC (Governor Initiative for Artificial Intelligence)</b> [on going] <br>
+            <p class="edit" contenteditable="true"><b style="color: black !important;" class="edit" contenteditable="true"> GIAIC (Governor Initiative for Artificial Intelligence)</b> [on going] <br>
             Web 3.0 and Metaverse<br>
             started February 2024.
             </p>
             <br />
-            <p><b style="color: black !important;"> SMIT (Saylani Mass IT Training)</b> [on going] <br>
+            <p class="edit" contenteditable="true"><b style="color: black !important;" class="edit" contenteditable="true"> SMIT (Saylani Mass IT Training)</b> [on going] <br>
             Mern Stack Developer<br>
             started May 2024.
             </p>
             <br />
-            <p><b style="color: black !important;"> BAHRIA COLLEGE KARACHI NORE-1</b> <br>
+            <p class="edit" contenteditable="true"><b style="color: black !important;" class="edit" contenteditable="true"> BAHRIA COLLEGE KARACHI NORE-1</b> <br>
             Intermediate in Computer-Science,<br>
             expected June 2023.
             </p>
-            <!-- <br />
-            <p><b style="color: black !important;"> IQRA HUFFAZ HIGH SCHOOL</b> <br>
+            <br />
+            <p class="edit" contenteditable="true"><b style="color: black !important;" class="edit" contenteditable="true"> IQRA HUFFAZ HIGH SCHOOL</b> <br>
             Matriculation in Science,<br>
             expected April 2021.
             </p>
- -->
 
             <br />
             <h3>Projects</h3>
-            <br />
 
             <hr style="border: 2px solid black; border-radius: 2px" />
             <br />
             <div class="sites-flex">
-              <p>
+              <p class="edit" contenteditable="true">
                 <a target="_blank" href="https://aestheitic-furniture-landing-page-css.netlify.app" style="text-decoration: none;">
-                  <b style="color: black !important;">
+                  <b class="edit" contenteditable="true" style="color: black !important;">
                     <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Aesthetic Modern Wood &nbsp;&nbsp; <img src="./assets/Group.png" width="33" height="13"></b></a> <br>
                     Pieces are often designed,to fit together like a puzzle.
               </p>
-              <p>
+              <p class="edit" contenteditable="true">
                 <a target="_blank" href="https://ali-baba-landing-page-css.netlify.app" style="text-decoration: none;">
-                  <b style="color: black !important;">
+                  <b class="edit" contenteditable="true" style="color: black !important;">
                     <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Ali Baba &nbsp;&nbsp; <img src="./assets/Group.png" width="33" height="13"></b></a> <br>
                     Retold by Andrew Lang, It opens on the magic words.
               </p>
             </div><br><br>
             <div class="sites-flex">
-              <p>
+              <p class="edit" contenteditable="true">
                 <a target="_blank" href="https://bootstrap-landing-page-css.netlify.app" style="text-decoration: none;">
-                  <b style="color: black !important;">
+                  <b class="edit" contenteditable="true" style="color: black !important;">
                     <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Embed Code &nbsp;&nbsp; <img src="./assets/Group.png" width="33" height="13"></b></a> <br>
                     Website created by , Pure Bootstrap.
               </p>
-              <p>
+              <p class="edit" contenteditable="true">
                 <a target="_blank" href="https://postivus-page-mini-hackathon.netlify.app" style="text-decoration: none;">
-                  <b style="color: black !important;">
+                  <b class="edit" contenteditable="true" style="color: black !important;">
                     <img src="./assets/list-style-type.png" />&nbsp;&nbsp; Postivus &nbsp;&nbsp; <img src="./assets/Group.png" width="33" height="13"></b></a> <br>
                     Fully responsive , based on Ecommerce website.
               </p>
             </div>
             <br>
-            <h3>HOBBIES</h3>
-            <br>
+             
             <hr style="border: 2px solid black; border-radius: 2px" />
+            <br><h3 class="print" onclick="window.print()">Get Print</h3>
             <br>
-            <div class="last-flex">
+            <!--<div class="last-flex">
               <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
                 <g fill="none">
@@ -297,7 +316,7 @@
                   <path fill="white" d="M2 12q0-2.075.788-3.9t2.137-3.175T8.1 2.788T12 2q3.175 0 5.663 1.75t3.612 4.525q.175.425.013.85T20.7 9.7q-.4.125-.762-.075t-.513-.6q-.6-1.5-1.725-2.65T15 4.6V5q0 .825-.587 1.413T13 7h-2v2q0 .425-.288.713T10 10H8v2h1q.425 0 .713.288T10 13v2H9l-4.8-4.8q-.075.45-.137.9T4 12q0 3.05 2.013 5.325t5.062 2.625q.4.05.663.338T12 21t-.288.713t-.687.237Q7.2 21.575 4.6 18.75T2 12m18.4 8.8l-2.5-2.5q-.525.3-1.125.5T15.5 19q-1.875 0-3.187-1.312T11 14.5t1.313-3.187T15.5 10t3.188 1.313T20 14.5q0 .675-.2 1.275t-.5 1.125l2.5 2.5q.275.275.275.7t-.275.7t-.7.275t-.7-.275M15.5 17q1.05 0 1.775-.725T18 14.5t-.725-1.775T15.5 12t-1.775.725T13 14.5t.725 1.775T15.5 17" />
                 </svg>
               </p>
-            </div>
+            </div> -->
           </div>
 
         </div>
