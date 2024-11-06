@@ -5,6 +5,10 @@
   font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
 }
+html,
+body {
+  background-color: #014b91;
+}
 .conatiner {
   width: 100vw;
   height: 100vh;
@@ -473,6 +477,9 @@ button {
   .trac_detls {
     width: 65%;
     margin: 0 auto;
+  }
+  .start h1 {
+    font-size: 30px;
   }
 }
 @media (max-width: 600px) {
