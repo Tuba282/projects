@@ -131,7 +131,6 @@ var questions = [
 
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const currentScoreElement = document.getElementById("current-score");
-const timerElement = document.getElementById("time");
 
 
 let currentScore = 0;
@@ -140,6 +139,8 @@ let currentQuestionIndex = 0;
 function initializeQuiz() {
     document.querySelector(".quote").style.display = 'none'
     document.querySelector(".quizDiv").style.display = 'block'
+    
+    document.getElementById("stratBtn").style.display = 'none'
 
     questions.forEach((q, index) => {
         const swiperSlide = document.createElement("div");
@@ -162,7 +163,7 @@ function initializeQuiz() {
         border: 2px solid rgba(255, 255, 255, 0.72);
         width: 400px;
         z-index: 11;
-        `;
+         `;
 
         const questionElement = document.createElement("p");
         questionElement.textContent = `Q${index + 1}: ${q.question}`;
