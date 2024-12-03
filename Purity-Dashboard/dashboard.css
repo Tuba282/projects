@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --whiteColor: #fff;
+  --darkGrey: #2d3748;
+  --lightGrey: #a0aec0;
+
+  --lightestGrey: #e2e8f0;
+  --lightTeal: #4fd1c5;
+  --darkTeal: #38b2ac;
+  --fontColor: #c4c4c4;
+}
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  background: var(--lightestGrey);
+}
+.dashboard .sidebar {
+  width: 15%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .logo {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+#pages {
+  align-self: flex-start;
+}
+#pages h4 {
+  font-weight: 300;
+}
+.accountPages li,
+.sidebarPages li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: var(--lightGrey);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.accountPages span,
+.sidebarPages span {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px 0px;
+  color: var(--darkTeal);
+  background: var(--whiteColor);
+}
+.accountPages i,
+.sidebarPages i {
+  font-size: 12px;
+}
+.helpCorner {
+  height: 200px;
+  padding: 1em;
+  display: grid;
+  border-radius: 12px;
+  color: var(--whiteColor);
+  background: url(./assets/needhelpBackground.png);
+}
+.helpCorner span {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px 0px;
+  color: var(--darkTeal);
+  background: var(--whiteColor);
+}
+.helpCorner span i {
+  width: 26px;
+  height: 24px;
+  display: flex;
+  font-size: 12px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: var(--darkTeal);
+  color: var(--whiteColor);
+}
+.helpCorner h5 {
+  font-size: 20px;
+}
+.helpCorner button {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+#bars {
+  display: none;
+}
+
+.firstContent {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.firstContent .MsgIcons {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.firstContent .MsgIcons span {
+  background: var(--whiteColor);
+  padding: 8px;
+  border-radius: 5px;
+}
+.dashboard .mainContent {
+  width: 85%;
+  padding: 2em;
+  background: var(--lightTeal);
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+@media (max-width: 1500px) {
+  .dashboard .sidebar {
+    width: 20%;
+  }
+  .dashboard .mainContent {
+    width: 80%;
+  }
+}
+@media (max-width: 1120px) {
+  .dashboard .sidebar {
+    width: 25%;
+  }
+  .dashboard .mainContent {
+    width: 75%;
+  }
+}
+@media (max-width: 998px) {
+  .dashboard {
+    display: grid;
+  }
+  .dashboard .sidebar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #pages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sidebarPages {
+    display: flex;
+    gap: 20px;
+    padding: 14px 0px;
+  }
+  .accountPages,
+  #pages h4,
+  .helpCorner {
+    display: none;
+  }
+  .dashboard .mainContent {
+    width: 100%;
+    min-height: 900px;
+  }
+}
+@media (max-width: 768px) {
+  #sidebarPages {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 2em 4em;
+    overflow: hidden;
+    max-height: 0;
+    background-color: var(--lightestGrey);
+  }
+  #pages .show-links {
+    display: flex;
+    max-height: 300px;
+  }
+  #bars {
+    display: block;
+  }
+  /* toggle bar ko clickable banana hai. */
+}

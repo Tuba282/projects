@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purity</title>
+    <!-- web icon -->
+    <link rel="shortcut icon" href="./assets/webicon.png" type="image/x-icon" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="mainScreen">
+      <div class="tealBackground">
+        <nav>
+          <div class="logo">
+            <img src="./assets/whiteLogo.png" width="200" height="25" alt="" />
+          </div>
+          <ul type="none" class="navLinks"></ul>
+          <button class="navBtn">Download</button>
+        </nav>
+
+        <div class="text">
+          <h1>Welcome!</h1>
+          <br />
+          <p>
+            Use these awesome forms to login or create new account in your
+            project for free
+          </p>
+          <br />
+        </div>
+      </div>
+      <div class="whiteBackground">
+        <div class="signUp">
+            <div>
+                <label for="userName">Name</label><br><br>
+                <input id="userName" type="text" placeholder="Your Full Name " required/>
+            </div>
+            <div>
+                <label for="userEmail">Email</label><br><br>
+                <input id="userEmail" type="email" placeholder="Your Email Address " required/>
+            </div>
+            <div>
+                <label for="userPassword">Password</label><br><br>
+                <input id="userPassword" type="password" placeholder="Your Password " required/>
+            </div>
+            
+            <div class="checkBox">
+                <div class="checkbox-apple">
+                    <input class="yep" id="check-apple" type="checkbox">
+                    <label for="check-apple"></label>
+                </div>
+                <span>Remember me</span>
+            </div>
+
+            <button class="signupBtn">SIGN UP</button>
+            <p>Already have an acount ? <span class="tubaName">Sign In</span></p>
+        </div>
+        <p class="footer">
+          <span
+            >@ 2024, Made with
+            <img
+              src="https://cdn3d.iconscout.com/3d/premium/thumb/heart-emoji-3d-icon-download-in-png-blend-fbx-gltf-file-formats--smiley-love-face-red-logo-pack-sign-symbols-icons-8772396.png"
+              width="20"
+              height="20"
+              alt=""
+            />
+            by <span class="tubaName">Tuba Jan</span> for a better web
+          </span>
+
+          <span class="footerLinks">
+            <span>Creative <span class="tubaName">Dashboard</span></span>
+            <span>Purity</span>
+            <span>Blog</span>
+            <span>License</span>
+          </span>
+        </p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

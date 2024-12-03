@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purity</title>
+    <!-- web icon -->
+    <link rel="shortcut icon" href="./assets/webicon.png" type="image/x-icon" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="./assets/blackLogo.png" width="200" height="25" alt="" />
+        </div>
+        <div id="pages">
+          <ul type="none" class="sidebarPages" id="sidebarPages"></ul>
+          <br />
+          <h4>Account Pages</h4>
+          <br />
+          <ul type="none" class="accountPages"></ul>
+        </div>
+        <i id="bars" class="fa-solid fa-bars" style="color: #38b2ac"></i>
+        <div class="helpCorner">
+          <span><i class="fa-solid fa-question"></i></span>
+
+          <h5>Need help ?</h5>
+          <p>Please check our docs</p>
+          <button>DOCUMENTATION</button>
+        </div>
+      </div>
+      <!-- mainContent -->
+      <div class="mainContent">
+        <div class="firstContent">
+          <p id="topPageName"></p>
+          <div class="MsgIcons">
+            <span>
+              <i class="fa-regular fa-bell fa-xs" style="color:var(--lightTeal)"></i>
+            </span>
+            <span>
+              <i class="fa-solid fa-magnifying-glass fa-xs" style="color:var(--lightTeal);"></i>
+            </span>
+          </div>
+        </div>
+        <!-- dashboard container -->
+        <div id="dashboardContainer" style="display: none;">
+          <h1>dashboardContainer</h1>
+        </div>
+        <!-- table Conatiner -->
+        <div id="tableContainer"  style="display: none;">
+          <h1>tableContainer</h1>
+        </div>
+        <!-- Billing Container -->
+        <div id="BillingContainer"  style="display: none;">
+          <h1>BillingContainer</h1>
+        </div>
+        <!-- Rtl Container -->
+        <div id="RtlContainer" style="display: none;">
+          <h1>RtlContainer</h1>
+        </div>
+        <!-- Profile Container -->
+        <div id="ProfileContainer"  style="display: none;">
+          <h1>ProfileContainer</h1>
+        </div>
+        <!-- SignUp Container -->
+        <div id="SignUpContainer"  style="display: none;">
+          <h1>SignUpContainer</h1>
+        </div>
+
+        <!-- Setting list Conatiner -->
+        <div id="settingContainer" style="display: none;">
+          <h1>settingContainer</h1>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
